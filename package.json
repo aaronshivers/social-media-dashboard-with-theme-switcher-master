@@ -1,7 +1,7 @@
 {
   "name": "social-media-dashboard-with-theme-switcher-master",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.jsx",
   "author": "aaronshivers <42848750+aaronshivers@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
