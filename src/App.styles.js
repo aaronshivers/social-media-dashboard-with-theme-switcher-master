@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Container = styled.div`
-  height: 100%;
+  min-height: 100%;
   background-color: ${({ theme }) => theme.bg};
   color: ${({ theme }) => theme.textDefault};
   padding: 5rem 3rem;

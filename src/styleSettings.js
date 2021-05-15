@@ -3,7 +3,7 @@ const styleSettings = {
     light: {
       bg: 'hsl(0, 0%, 100%)',
       bgTop: 'hsl(225, 100%, 98%)',
-      cardBg: 'hsl(227, 47%, 96%)',
+      bgCard: 'hsl(227, 47%, 96%)',
       textAlt: 'hsl(228, 12%, 44%)',
       textDefault: 'hsl(230, 17%, 14%)',
       toggle: 'hsl(230, 22%, 74%)',
@@ -11,7 +11,7 @@ const styleSettings = {
     dark: {
       bg: 'hsl(230, 17%, 14%)',
       bgTop: 'hsl(232, 19%, 15%)',
-      cardBg: 'hsl(228, 28%, 20%)',
+      bgCard: 'hsl(228, 28%, 20%)',
       textAlt: 'hsl(228, 34%, 66%)',
       textDefault: 'hsl(0, 0%, 100%)',
       toggle: {
@@ -30,7 +30,7 @@ const styleSettings = {
       start: 'hsl(37, 97%, 70%)',
       end: 'hsl(329, 70%, 58%)',
     },
-    youTube: 'hsl(348, 97%, 39%)',
+    youtube: 'hsl(348, 97%, 39%)',
   },
   sizes: {
     small: '1.2rem',
