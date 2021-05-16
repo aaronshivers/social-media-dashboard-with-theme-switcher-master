@@ -17,15 +17,20 @@ const Border = styled.div`
         return `background-color: ${colors[social]}`;
     }
   }};
-  
-  @media (min-width: ${breakPoints.desktop}) {
-    //width: 322.5px;
-    //height: 322.5px;
-  }
 `;
 
 const Container = styled.div`
-  background-color: ${({ theme }) => theme.bgCard};
+  background-color: ${({ active, theme }) => (
+    active ? (
+      theme.id === 'light' ? (
+        darken(0.05, theme.bgCard)
+      ) : (
+        lighten(0.05, theme.bgCard)
+      )
+    ) : (
+      theme.bgCard
+    )
+  )};
   border-radius: 0 0 .5rem .5rem;
   padding: 2rem;
   display: flex;
@@ -34,15 +39,6 @@ const Container = styled.div`
 
   :hover {
     cursor: pointer;
-  }
-
-  :active {
-    background-color: ${({ theme }) => (
-    theme.id === 'light' ? (
-      darken(0.05, theme.bgCard)
-    ) : (
-      lighten(0.05, theme.bgCard)
-    ))};
   }
 
   @media (min-width: ${breakPoints.desktop}) {

@@ -5,20 +5,22 @@ import styleSettings from '../../styleSettings';
 const { breakPoints, colors } = styleSettings;
 
 const Container = styled.div`
-  background-color: ${({ theme }) => theme.bgCard};
+  background-color: ${({ active, theme }) => (
+    active ? (
+      theme.id === 'light' ? (
+        darken(0.05, theme.bgCard)
+      ) : (
+        lighten(0.05, theme.bgCard)
+      )
+    ) : (
+      theme.bgCard
+    )
+  )};
   border-radius: .5rem;
   display: flex;
   flex-direction: column;
   margin: 2rem 0;
   font-size: 1.3rem;
-
-  :active {
-    background-color: ${({ theme }) => (
-    theme.id === 'light' ? (
-      darken(0.05, theme.bgCard)
-    ) : (
-      lighten(0.05, theme.bgCard)
-    ))};
 
   @media (min-width: ${breakPoints.desktop}) {
     margin: 0;
