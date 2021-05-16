@@ -26,6 +26,7 @@ const TotalFollowers = styled.p`
 const Line = styled.hr`
   margin: 2.5rem 0;
   border: 1px solid ${({ theme }) => theme.textAlt};
+  background-color: ${({ theme }) => theme.textAlt};
 `;
 
 export {

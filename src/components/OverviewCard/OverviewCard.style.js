@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { darken, lighten } from 'polished';
 import styleSettings from '../../styleSettings';
 
 const { breakPoints, colors } = styleSettings;
@@ -11,9 +12,15 @@ const Container = styled.div`
   margin: 2rem 0;
   font-size: 1.3rem;
 
+  :active {
+    background-color: ${({ theme }) => (
+    theme.id === 'light' ? (
+      darken(0.05, theme.bgCard)
+    ) : (
+      lighten(0.05, theme.bgCard)
+    ))};
+
   @media (min-width: ${breakPoints.desktop}) {
-    //width: 322.5px;
-    //height: 208px;
     margin: 0;
   }
 `;
@@ -23,7 +30,7 @@ const Row = styled.div`
   justify-content: space-between;
   margin: 2rem;
   align-items: flex-end;
-  
+
   &:last-child {
     margin: 0 2rem 2rem
   }
@@ -44,7 +51,7 @@ const Change = styled.span`
   align-items: center;
   display: flex;
   font-weight: bold;
-  
+
   > img {
     margin-right: .5rem;
     height: .75rem;

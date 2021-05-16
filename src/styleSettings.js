@@ -1,6 +1,7 @@
 const styleSettings = {
   themes: {
     light: {
+      id: 'light',
       bg: 'hsl(0, 0%, 100%)',
       bgTop: 'hsl(225, 100%, 98%)',
       bgCard: 'hsl(227, 47%, 96%)',
@@ -9,6 +10,7 @@ const styleSettings = {
       toggle: 'hsl(230, 22%, 74%)',
     },
     dark: {
+      id: 'dark',
       bg: 'hsl(230, 17%, 14%)',
       bgTop: 'hsl(232, 19%, 15%)',
       bgCard: 'hsl(228, 28%, 20%)',

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { darken, lighten } from 'polished';
 import styleSettings from '../../styleSettings';
 
 const { breakPoints, colors } = styleSettings;
@@ -30,6 +31,19 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  :hover {
+    cursor: pointer;
+  }
+
+  :active {
+    background-color: ${({ theme }) => (
+    theme.id === 'light' ? (
+      darken(0.05, theme.bgCard)
+    ) : (
+      lighten(0.05, theme.bgCard)
+    ))};
+  }
 
   @media (min-width: ${breakPoints.desktop}) {
     //width: 322.5px;
