@@ -1,12 +1,14 @@
 import React from 'react';
 import TotalCard from '../TotalCard';
 import { totals } from '../../assets/data';
+import { Container } from './Totals.styles';
 
 const Totals = () => (
-  <div>
+  <Container>
     {
       totals.map(({
-        logo, user, count, change, type, direction, arrow, social,
+        logo, user, count, change, type, direction, arrow,
+        social,
       }) => (
         <TotalCard
           key={social}
@@ -21,7 +23,7 @@ const Totals = () => (
         />
       ))
     }
-  </div>
+  </Container>
 );
 
 Totals.propTypes = {};

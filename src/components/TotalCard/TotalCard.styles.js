@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import styleSettings from '../../styleSettings';
 
-const { sizes, breakPoints, colors } = styleSettings;
+const { breakPoints, colors } = styleSettings;
 
 const Border = styled.div`
   margin: 2rem 0;
@@ -16,6 +16,11 @@ const Border = styled.div`
         return `background-color: ${colors[social]}`;
     }
   }};
+  
+  @media (min-width: ${breakPoints.desktop}) {
+    //width: 322.5px;
+    //height: 322.5px;
+  }
 `;
 
 const Container = styled.div`
@@ -25,6 +30,11 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: ${breakPoints.desktop}) {
+    //width: 322.5px;
+    height: 208px;
+  }
 `;
 
 const Header = styled.div`

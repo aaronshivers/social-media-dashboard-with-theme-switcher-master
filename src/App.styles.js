@@ -1,7 +1,7 @@
 import styled, { createGlobalStyle } from 'styled-components';
 import styleSettings from './styleSettings';
 
-const { sizes, breakPoints } = styleSettings;
+const { sizes } = styleSettings;
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
@@ -31,18 +31,16 @@ const Container = styled.div`
   background-color: ${({ theme }) => theme.bg};
   color: ${({ theme }) => theme.textDefault};
   padding: 5rem 3rem;
-  //margin: 0 auto;
-  // padding: ${sizes.extraLarge};
-  
-  // @media(min-width: ${breakPoints.desktop}) {
-  //   display: flex;
-  //   align-items: center;
-  //   width: 75vw;
-  //   height: 100vh;
-  // }
+`;
+
+const Row = styled.div`
+  display: flex;
+  flex-direction: ${({ direction }) => direction};
+  justify-content: space-between;
 `;
 
 export {
   GlobalStyle as default,
   Container,
+  Row,
 };

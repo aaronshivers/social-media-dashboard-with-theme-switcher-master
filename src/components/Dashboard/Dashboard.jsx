@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import Header from '../Header';
 import Overview from '../Overview';
 import Totals from '../Totals';
+import { Container } from './Dashboard.styles';
 
 const Dashboard = ({ theme, setTheme }) => (
-  <div>
+  <Container>
     <Header theme={theme} setTheme={setTheme} />
     <Totals />
     <Overview />
-  </div>
+  </Container>
 );
 
 Dashboard.propTypes = {

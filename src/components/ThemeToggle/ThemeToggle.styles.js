@@ -11,6 +11,8 @@ const Span = styled.label`
   text-transform: capitalize;
   color: ${({ theme }) => theme.textAlt};
   font-weight: bold;
+  white-space: nowrap;
+  margin-right: 2rem;
 `;
 
 export {

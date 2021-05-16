@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import styleSettings from '../../styleSettings';
 
-const { colors } = styleSettings;
+const { breakPoints, colors } = styleSettings;
 
 const Container = styled.div`
   background-color: ${({ theme }) => theme.bgCard};
@@ -10,6 +10,12 @@ const Container = styled.div`
   flex-direction: column;
   margin: 2rem 0;
   font-size: 1.3rem;
+
+  @media (min-width: ${breakPoints.desktop}) {
+    //width: 322.5px;
+    //height: 208px;
+    margin: 0;
+  }
 `;
 
 const Row = styled.div`
