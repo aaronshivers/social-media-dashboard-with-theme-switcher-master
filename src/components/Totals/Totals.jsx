@@ -1,14 +1,15 @@
 import React from 'react';
-import Card from '../Card';
+import TotalCard from '../TotalCard';
 import { totals } from '../../assets/data';
 
-const Totals = (props) => (
+const Totals = () => (
   <div>
     {
       totals.map(({
         logo, user, count, change, type, direction, arrow, social,
       }) => (
-        <Card
+        <TotalCard
+          key={social}
           logo={logo}
           user={user}
           count={count}

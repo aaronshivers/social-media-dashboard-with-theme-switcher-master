@@ -36,7 +36,7 @@ const Body = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 3rem 0;
+  margin: 2.5rem 0;
 `;
 const Footer = styled.div`
   display: flex;

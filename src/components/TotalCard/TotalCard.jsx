@@ -10,9 +10,9 @@ import {
   Logo, Type,
   User,
   Arrow, Border,
-} from './Card.styles';
+} from './TotalCard.styles';
 
-const Card = ({
+const TotalCard = ({
   logo, user, count, change, type, direction, arrow, social,
 }) => (
   <Border social={social}>
@@ -33,7 +33,7 @@ const Card = ({
   </Border>
 );
 
-Card.propTypes = {
+TotalCard.propTypes = {
   logo: PropTypes.string.isRequired,
   user: PropTypes.string.isRequired,
   count: PropTypes.string.isRequired,
@@ -44,4 +44,4 @@ Card.propTypes = {
   social: PropTypes.string.isRequired,
 };
 
-export default Card;
+export default TotalCard;
